@@ -1,0 +1,337 @@
+<div class="logo">Growth with Ankit</div>
+<!DOCTYPE html>
+<html lang="en">
+  <p class="small-text">Not sure? Just pick one that feels closest.</p>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growth with Ankit</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Progress bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Online indicator -->
+    <div class="online-indicator">
+        <span class="online-dot"></span>
+        <span id="onlineCount">23</span> others here right now
+    </div>
+
+    <!-- =============================================
+         SECTION 0: THE HOOK
+         ============================================= -->
+    <section class="section active" id="section-0">
+        <div class="section-content">
+            <p class="subtext text-reveal">Every good story starts with a strange email.</p>
+            <p class="headline text-reveal">This is definitely one of them.</p>
+            <div class="divider text-reveal"></div>
+            <p class="subtext text-reveal">Good work needs the right partners.</p>
+            <p class="subtext text-reveal">Not vendors. Not agencies. <span class="emphasis">Partners.</span></p>
+            <p class="subtext text-reveal">People who get it without a 47-slide deck.</p>
+            <p class="subtext text-reveal">And that's probably why you're here.</p>
+
+            <div class="input-group text-reveal">
+                <label class="subtext">I'm Ankit, and you are?</label>
+                <input type="text" class="input-field" id="userName" placeholder="Your first name">
+            </div>
+
+            <button class="btn-primary text-reveal" id="btn-section-0" disabled>
+                <span id="btnText-0">Let's go</span>
+                <span class="arrow">→</span>
+            </button>
+            <p class="small-text text-reveal">First name works. We're not formal here.</p>
+        </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 1: THE FORK (Role Selection)
+         ============================================= -->
+    <section class="section" id="section-1">
+        <button class="btn-back" onclick="goToSection(0)">← Back</button>
+        <div class="section-content">
+            <p class="headline text-reveal">Hey <span id="displayName-1">there</span>.</p>
+            <p class="subtext text-reveal">One quick thing before we go further.</p>
+            <p class="subtext text-reveal">Which of these sounds most like you?</p>
+
+            <div class="role-grid text-reveal" id="roleGrid">
+                <div class="role-card" data-role="founder">Founder / CEO</div>
+                <div class="role-card" data-role="cmo">CMO / Marketing Head</div>
+                <div class="role-card" data-role="growth">Growth Lead</div>
+                <div class="role-card" data-role="hr">HR / Recruiter</div>
+                <div class="role-card" data-role="media">Media / Journalist</div>
+            </div>
+
+            <p class="small-text text-reveal">Your journey from here changes based on what you choose.</p>
+
+            <button class="btn-primary text-reveal" id="btn-section-1" disabled>
+                <span>This is me</span>
+                <span class="arrow">→</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 2: THE MIRROR (Pain Points)
+         ============================================= -->
+ 
+  <section class="section" id="section-2">
+        <button class="btn-back" onclick="goToSection(1)">← Back</button>
+        <div class="section-content">
+            <p class="headline text-reveal"><span id="displayName-2">Friend</span>, <span id="painIntro">building a company is one thing.</span></p>
+            <p class="subtext text-reveal" id="painSubtext">Getting the world to notice? That's another war.</p>
+            <p class="subtext text-reveal" id="painQuestion">Which of these keeps you up?</p>
+
+            <div class="checkbox-group text-reveal" id="painPoints">
+                <!-- Dynamic pain points inserted by JS -->
+            </div>
+
+            <button class="btn-primary text-reveal" id="btn-section-2" disabled>
+                <span>That's the one</span>
+                <span class="arrow">→</span>
+            </button>
+            <p class="small-text text-reveal">Select all that apply.</p>
+        </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 3: THE REVEAL (What Ankit Does)
+         ============================================= -->
+    <section class="section" id="section-3">
+        <button class="btn-back" onclick="goToSection(2)">← Back</button>
+        <div class="section-content">
+            <p class="subtext text-reveal">So here's what this is, <span id="displayName-3">friend</span>.</p>
+            <p class="headline text-reveal">I'm Ankit.</p>
+            <p class="subtext text-reveal">I help companies figure out their marketing — then actually do it.</p>
+
+            <div class="divider text-reveal"></div>
+
+            <p class="subtext text-reveal">Not advice from the sidelines.<br><span class="emphasis">Hands in the work. Skin in the outcome.</span></p>
+
+            <p class="subtext text-reveal">Some call it Fractional CMO.<br>I call it: your marketing co-pilot.</p>
+
+            <div class="text-reveal" style="margin: 32px 0;">
+                <div class="offering-item"><span class="offering-arrow">→</span> GTM strategy that doesn't live in a Google Doc graveyard</div>
+                <div class="offering-item"><span class="offering-arrow">→</span> Campaigns that actually ship (like this one)</div>
+                <div class="offering-item"><span class="offering-arrow">→</span> Building your first marketing hire — or your first team</div>
+                <div class="offering-item"><span class="offering-arrow">→</span> 0→1 launches. 1→10 growth. 10→100 scale.</div>
+                <div class="offering-item"><span class="offering-arrow">→</span> The weird stuff no one else wants to own</div>
+            </div>
+
+            <button class="btn-primary text-reveal" id="btn-section-3">
+                <span>Sounds interesting</span>
+                <span class="arrow">→</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 4: THE WHY (Fractional vs Full-Time)
+         ============================================= -->
+    <section class="section" id="section-4">
+        <button class="btn-back" onclick="goToSection(3)">← Back</button>
+        <div class="section-content">
+            <p class="headline text-reveal">Why not just hire someone full-time?</p>
+            <p class="subtext text-reveal">You could. But here's the math:</p>
+
+            <div class="comparison-block text-reveal">
+                <div class="comparison-item">
+                    <div class="comparison-label">Full-time CMO</div>
+                    <div class="comparison-value">₹40-80L/year + equity + 3-month search + hope they work out</div>
+                </div>
+                <div class="comparison-item">
+                    <div class="comparison-label">Working with me</div>
+                    <div class="comparison-value highlight">Start in 7 days. Pause anytime. No drama.</div>
+                </div>
+            </div>
+
+            <p class="subtext text-reveal">Not better or worse. Just different.</p>
+            <p class="subtext text-reveal"><span class="emphasis">Right for some. Not for all.</span></p>
+
+            <button class="btn-primary text-reveal" id="btn-section-4">
+                <span>I get it. What's next?</span>
+                <span class="arrow">→</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 5: THE OFFERINGS (What They Need)
+         ============================================= -->
+    <section class="section" id="section-5">
+        <button class="btn-back" onclick="goToSection(4)">← Back</button>
+        <div class="section-content">
+            <p class="headline text-reveal">What sounds most useful right now, <span id="displayName-5">friend</span>?</p>
+
+            <div class="checkbox-group text-reveal" id="offeringsGroup">
+                <div class="checkbox-item" data-offering="gtm">
+                    <div class="checkbox-box">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path d="M2 7L5.5 10.5L12 3.5" stroke="#0a0a0a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <span class="checkbox-label">Build a GTM plan together</span>
+                </div>
+                <div class="checkbox-item" data-offering="campaign">
+                    <div class="checkbox-box">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path d="M2 7L5.5 10.5L12 3.5" stroke="#0a0a0a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <span class="checkbox-label">Run a campaign like this for my brand</span>
+                </div>
+                <div class="checkbox-item" data-offering="team">
+                    <div class="checkbox-box">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path d="M2 7L5.5 10.5L12 3.5" stroke="#0a0a0a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <span class="checkbox-label">Hire or build a marketing team</span>
+                </div>
+                <div class="checkbox-item" data-offering="fractional">
+                    <div class="checkbox-box">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path d="M2 7L5.5 10.5L12 3.5" stroke="#0a0a0a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <span class="checkbox-label">Fractional CMO / Marketing Lead</span>
+                </div>
+                <div class="checkbox-item" data-offering="consult">
+                    <div class="checkbox-box">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path d="M2 7L5.5 10.5L12 3.5" stroke="#0a0a0a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <span class="checkbox-label">Just want to pick your brain (1 hr call)</span>
+                </div>
+                <div class="checkbox-item" data-offering="other">
+                    <div class="checkbox-box">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path d="M2 7L5.5 10.5L12 3.5" stroke="#0a0a0a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <span class="checkbox-label">Something else entirely</span>
+                </div>
+            </div>
+
+            <div id="otherInput" style="display: none; margin-top: 16px;">
+                <textarea class="textarea-field" id="otherOffering" placeholder="Tell me what you're thinking..."></textarea>
+            </div>
+
+            <button class="btn-primary text-reveal" id="btn-section-5" disabled>
+                <span>Almost there</span>
+                <span class="arrow">→</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 6: CONTACT DETAILS
+         ============================================= -->
+    <section class="section" id="section-6">
+        <button class="btn-back" onclick="goToSection(5)">← Back</button>
+        <div class="section-content">
+            <p class="headline text-reveal">We're almost done, <span id="displayName-6">friend</span>.</p>
+            <p class="subtext text-reveal">Just need a few things so I can actually reach you.</p>
+
+            <div class="input-row text-reveal">
+                <div>
+                    <label class="input-label">Email</label>
+                    <input type="email" class="contact-input" id="userEmail" placeholder="your@email.com">
+                </div>
+                <div>
+                    <label class="input-label">Phone (WhatsApp works)</label>
+                    <input type="tel" class="contact-input" id="userPhone" placeholder="+91 98765 43210">
+                </div>
+            </div>
+
+            <p class="small-text text-reveal">No spam. Just a message from me. Maybe a voice note if I'm feeling fancy.</p>
+
+            <button class="btn-primary text-reveal" id="btn-section-6" disabled>
+                <span>Lock it in</span>
+                <span class="arrow">→</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- =============================================
+         SECTION 7: THE SHOWCASE (Final)
+         ============================================= -->
+    <section class="section" id="section-7">
+        <div class="section-content">
+            <p class="headline text-reveal"><span id="displayName-7">Friend</span>, here's what just happened.</p>
+
+            <div class="lead-card text-reveal">
+                <div class="lead-card-header">Your Lead Card</div>
+                <div class="lead-card-row">
+                    <span class="lead-card-label">Name</span>
+                    <span class="lead-card-value" id="summary-name">—</span>
+                </div>
+                <div class="lead-card-row">
+                    <span class="lead-card-label">Role</span>
+                    <span class="lead-card-value" id="summary-role">—</span>
+                </div>
+                <div class="lead-card-row">
+                    <span class="lead-card-label">Biggest Challenge</span>
+                    <span class="lead-card-value" id="summary-pain">—</span>
+                </div>
+                <div class="lead-card-row">
+                    <span class="lead-card-label">Interested In</span>
+                    <span class="lead-card-value" id="summary-offering">—</span>
+                </div>
+                <div class="lead-card-row">
+                    <span class="lead-card-label">Email</span>
+                    <span class="lead-card-value" id="summary-email">—</span>
+                </div>
+                <div class="lead-card-row">
+                    <span class="lead-card-label">Phone</span>
+                    <span class="lead-card-value" id="summary-phone">—</span>
+                </div>
+            </div>
+
+            <div class="stats-grid text-reveal">
+                <div class="stat-item">
+                    <div class="stat-number" id="stat-visitors">847</div>
+                    <div class="stat-label">Visitors</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="stat-filled">234</div>
+                    <div class="stat-label">Filled This</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="stat-calls">42</div>
+                    <div class="stat-label">Calls Booked</div>
+                </div>
+            </div>
+
+            <div class="quote-block text-reveal">
+                See? Lead gen doesn't have to feel like a root canal.<br>
+                <strong>It can be this.</strong>
+            </div>
+
+            <p class="headline text-reveal" style="margin-top: 32px;">Now, let's make it real.</p>
+
+            <button class="btn-calendly text-reveal" id="btn-calendly" onclick="openCalendly()">
+                Book a call with Ankit
+                <span>→</span>
+            </button>
+
+            <p class="small-text text-reveal" style="text-align: center;">Or just reply to my WhatsApp. I read everything.</p>
+        </div>
+    </section>
+
+    <!-- Scripts (order matters!) -->
+    <script src="js/config.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/state.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
