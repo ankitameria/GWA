@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/kxetykvf/public_html/start_growthwithankit.com
+    - /bin/cp -R * $DEPLOYPATH
